@@ -25,7 +25,7 @@ h1, h2 {
 
 .header i {
     margin-right: 10px; /* Espaço entre o ícone e o título */
-    color: #28a745; /* Cor do ícone */
+    color: rgb(75, 62, 44); /* Cor do ícone */
 }
 
 .section {
@@ -62,7 +62,7 @@ input[readonly] {
 }
 
 .edit-password {
-    background-color: #28a745; /* Fundo verde */
+    background-color: rgb(75, 62, 44); /* Fundo verde */
     color: white; /* Cor do texto */
     border: none;
     border-radius: 5px;
@@ -72,12 +72,12 @@ input[readonly] {
 }
 
 .edit-password:hover {
-    background-color: #218838; /* Cor ao passar o mouse */
+    background-color: rgba(75, 62, 44, 0.523); /* Cor ao passar o mouse */
 }
 
 button {
     padding: 10px 15px;
-    background-color: #28a745;
+    background-color: rgb(75, 62, 44);
     color: white;
     border: none;
     border-radius: 5px;
@@ -85,14 +85,26 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: rgba(75, 62, 44, 0.523);
 }
 
 
+
+
+
 .navbar {
-    background-color: #444;
+    background-color: #111;
     padding: 10px 20px;
     color: #fff;
+}
+
+.navbar button {
+    background-color: rgba(222, 184, 135, 0.239);
+    font-size: 1rem;
+}
+
+.navbar button:hover {
+    background-color: #222;
 }
 
 .navbar-container {
@@ -101,8 +113,15 @@ button:hover {
     align-items: center; 
 }
 
-.nav-logo {
-    max-height: 40px; 
+.logo {
+    float: left;
+    padding-left: 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: burlywood;
+    font-size: 1rem;
 }
 
 .nav-items {
@@ -118,7 +137,7 @@ button:hover {
 
 .nav-items a {
     color: white; 
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .nav-items a:hover {

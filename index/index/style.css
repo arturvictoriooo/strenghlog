@@ -137,10 +137,23 @@ footer p {
     font-style: italic;
 }
 
+
+
+
+
 .navbar {
-    background-color: #444;
+    background-color: #111;
     padding: 10px 20px;
     color: #fff;
+}
+
+.navbar button {
+    background-color: rgba(222, 184, 135, 0.239);
+    font-size: 1rem;
+}
+
+.navbar button:hover {
+    background-color: #222;
 }
 
 .navbar-container {
@@ -149,8 +162,15 @@ footer p {
     align-items: center; 
 }
 
-.nav-logo {
-    max-height: 40px; 
+.logo {
+    float: left;
+    padding-left: 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: burlywood;
+    font-size: 1rem;
 }
 
 .nav-items {
@@ -166,12 +186,17 @@ footer p {
 
 .nav-items a {
     color: white; 
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .nav-items a:hover {
     text-decoration: underline; 
 }
+
+
+
+
+
 
 table {
     width: 100%;
