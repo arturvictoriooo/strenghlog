@@ -1,0 +1,124 @@
+html, body {
+    height: 100%; /* Faz o corpo ocupar toda a altura da página */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Coloca os filhos em uma coluna */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Faz o main ocupar todo o espaço disponível */
+}
+
+.login-section {
+    color: black;
+    padding: 50px;
+    text-align: center;
+    margin-top: 10vh; /* Mantém o espaço acima da seção */
+}
+
+.signup-section {
+    color: black;
+    padding: 50px;
+    text-align: center;
+    margin-top: 10vh; /* Adiciona espaço acima da seção */
+}
+
+.login-section form {
+    width: 50%; /* Define a largura do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.signup-section form {
+    width: 50%; /* Define a largura do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.form-group {
+    margin: 20px 0;
+    text-align: left; /* Alinha os rótulos à esquerda */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%; /* O campo de entrada ocupa 100% da largura do formulário */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: gray; /* Cor do botão */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #6c3c0c; /* Cor ao passar o mouse */
+}
+
+
+.navbar {
+    background-color: #251c16;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.nav-logo {
+    max-height: 40px; 
+}
+
+.nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.nav-items li {
+    margin-left: 20px; 
+}
+
+.nav-items a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.nav-items a:hover {
+    text-decoration: underline; 
+} 
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    height: 80vh; /* Altura do cabeçalho ajustada para 80vh */
+}
+
+footer {
+    background-color: #4e4a46;
+    color: #ffffff; /* Ajuste conforme o contraste desejado */
+    padding: 8px;
+    text-align: center;
+}
+

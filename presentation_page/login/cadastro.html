@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="/presentation_page/images/logo_strenghlog.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - StrengthLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script_signup.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/presentation_page/images/logo_strenghlog.png" alt="Logo do StrengthLog" class="nav-logo">
+                </a>
+            </div>
+            <ul class="nav-items">
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="signup-section">
+            <h2 class="suse-title">Cadastre-se</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="nome" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Cadastrar</button>
+            </form>
+            <p>Já possui cadastro? <a href="login.html">Login</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 StrengthLog. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

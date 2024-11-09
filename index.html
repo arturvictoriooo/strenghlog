@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="/presentation_page/images/logo_strenghlog.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrengthLog - Introdução</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/presentation_page/style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">StrenghLog</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="/presentation_page/login/cadastro.html">Login</a></li>
+                    <li><a href="/presentation_page/login/login.html">Cadastre-se</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-container">
+            <div class="project-name">
+                <h1 class="suse-title">StrengthLog</h1>
+            </div>
+            <div class="logo">
+                <img src="/presentation_page/images/logo_strenghlog.png" alt="Logo do StrengthLog">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="description-section" id="sobre">
+            <div class="description-container">
+                <div class="description-text">
+                    <h2 class="suse-title">Sobre o StrengthLog</h2>
+                    <p>
+                        O StrengthLog é um sistema inovador desenvolvido para o acompanhamento detalhado da evolução de treinos de força, atendendo praticantes de academia e personal trainers. O sistema registra informações importantes de cada sessão de treino, como grupamentos musculares, tipos de exercícios, séries, pesos, repetições e técnicas aplicadas. Com uma interface intuitiva, os usuários podem registrar treinos, acessar históricos completos e visualizar seu progresso de forma organizada.
+                    </p>
+                    <h3>Objetivos Funcionais</h3>
+                    <ul>
+                        <li><strong>Registro de Treinos:</strong> Permite registrar detalhes dos treinos, incluindo exercícios e séries.</li>
+                        <li><strong>Organização por Semana:</strong> Facilita a visualização da evolução semanal.</li>
+                        <li><strong>Visualização de Histórico:</strong> Oferece opções de filtragem por grupamento muscular e períodos específicos.</li>
+                        <li><strong>Comparação de Progresso:</strong> Ajuda a identificar melhorias e áreas de foco.</li>
+                        <li><strong>Geração de Relatórios:</strong> Resumem a evolução com gráficos e estatísticas.</li>
+                        <li><strong>Exportação de Dados:</strong> Permite a exportação para PDF ou Excel.</li>
+                        <li><strong>Configuração e Personalização:</strong> Usuários podem ajustar a interface e funcionalidades.</li>
+                        <li><strong>Acesso Multiusuário:</strong> Suporta múltiplos perfis para diferentes usuários.</li>
+                        <li><strong>Notificações e Lembretes:</strong> Sistema para lembrar usuários sobre registros e metas.</li>
+                    </ul>
+                    <a href="/presentation_page/login/cadastro.html" class="button">Cadastre-se</a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="signup-section">
+            <h2 class="suse-title">Comece agora!</h2>
+            <p>Cadastre-se para acompanhar sua evolução nos treinos e maximize seus resultados!</p>
+            <a href="/presentation_page/login/cadastro.html" class="button">Cadastre-se</a>
+            <a href="/presentation_page/login/login.html" class="button">Login</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 StrengthLog. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Inclua jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Script de rolagem -->
+    <script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > $(window).height()) { // Substitua 50 por $(window).height()
+                $('.nav').addClass('scrolled');  
+            } else {
+                $('.nav').removeClass('scrolled');  
+            }
+        });
+    </script>
+
+</body>
+</html>

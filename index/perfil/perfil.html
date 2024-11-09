@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="/presentation_page/images/logo_strenghlog.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Usuário</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="/presentation_page/images/logo_strenghlog.png" alt="Logo do StrengthLog" class="nav-logo">
+            </div>
+            <ul class="nav-items">
+                <li><a href="/index/index/index.html" class="suse-nav-item">Voltar</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-user fa-2x"></i>
+            <h1>Configurações do Usuário</h1>
+        </div>
+        <form id="settings-form">
+            <div class="section">
+                <h2>Perfil</h2>
+                <label for="password">Nome de Usuário</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Artur Victorio Figueiredo" readonly>
+                    <button type="button" class="edit-password" title="Editar Senha">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+
+                <label for="password">E-mail</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="victorio.arturfigueiredo@gmail.com" readonly>
+                    <button type="button" class="edit-password" title="Editar Senha">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+
+                <label for="password">Senha</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="* * * * * * * * * *" readonly>
+                    <button type="button" class="edit-password" title="Editar Senha">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Preferências</h2>
+                <label>Unidades de Medida:</label>
+                <label><input type="radio" name="unit" value="metric" checked> Métrico (kg/m)</label>
+                <label><input type="radio" name="unit" value="imperial"> Imperial (lbs/ft)</label>
+                
+                <label for="password">Idade</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="20 anos" readonly>
+                    <button type="button" class="edit-password" title="Editar Senha">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+                <label for="password">Altura</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="1.75m" readonly>
+                    <button type="button" class="edit-password" title="Editar Senha">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+                <label for="password">Peso</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="1.75m" readonly>
+                    <button type="button" class="edit-password" title="Editar Senha">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <button type="submit">Salvar Configurações</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

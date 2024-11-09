@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="/presentation_page/images/logo_strenghlog.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Treino</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="scrip_supabase_connection.js"></script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo"></div>
+            <ul class="nav-items">
+                <button id="logout-btn">Logout</button>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/150" alt="Ícone do Usuário" class="user-icon">
+            <div class="user-info">
+                <h2 id="user-name">Nome do Usuário</h2>
+                <a href="/index/perfil/perfil.html" class="profile-link">Informações adicionais do perfil</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'registro')">Registro de Treino</button>
+            <button class="tab-link" onclick="openTab(event, 'treinos')">Treinos Registrados</button>
+        </div>
+
+        <div id="registro" class="tab-content">
+            <section class="form-section">
+                <form id="treinoForm">
+                    <div class="form-group">
+                        <label for="semana">Semana:</label>
+                        <input type="date" id="semana" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grupamentoMuscular">Grupamento Muscular:</label>
+                        <select id="grupamentoMuscular" name="grupamentoMuscular" required>
+                            <option value="">Selecione</option>
+                            <option value="Costas">Costas</option>
+                            <option value="Peito">Peito</option>
+                            <option value="Ombro">Ombro</option>
+                            <option value="Biceps">Bíceps</option>
+                            <option value="Triceps">Tríceps</option>
+                            <option value="Quadriceps">Quadríceps</option>
+                            <option value="Posterior">Posterior de Coxa</option>
+                            <option value="Panturrilha">Panturrilha</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exercicio">Exercício:</label>
+                        <input type="text" id="exercicio" name="exercicio" placeholder="Nome do exercício" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="series">Séries:</label>
+                        <input type="number" id="series" name="series" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="repeticoes">Repetições:</label>
+                        <input type="number" id="repeticoes" name="repeticoes" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tecnicaAvancada">Técnica Avançada:</label>
+                        <input type="text" id="tecnicaAvancada" name="tecnicaAvancada" placeholder="Descreva a técnica (se houver)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações:</label>
+                        <textarea id="observacoes" name="observacoes" rows="1" placeholder="Informações adicionais sobre o treino"></textarea>
+                    </div>
+
+                    <button type="submit">Registrar Treino</button>
+                </form>
+                <div id="mensagem" style="display: none;"></div>
+            </section>
+        </div>
+
+        <div id="treinos" class="tab-content" style="display: none;">
+            <section>
+                <p>Aqui serão exibidas as tabelas dos treinos registrados.</p>
+
+                <div class="filter-container">
+                    <div class="filter-left">
+                        <label for="filterDate">Filtrar por data:</label>
+                        <input type="date" id="filterDate">
+                    </div>
+                    <div class="filter-right">
+                        <button id="filterBtn">Filtrar</button>
+                        <button id="clearFilterBtn">Limpar Filtro</button>
+                    </div>
+                </div>
+
+                <table id="treinosTable">
+                    <thead>
+                        <tr>
+                            <th>Semana</th>
+                            <th>Grupamento Muscular</th>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                            <th>Técnica Avançada</th>
+                            <th>Observações</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="script_tab.js"></script>
+
+    <footer>
+        <p>StrengthLog™ 2024 All Rights Reserved</p>
+    </footer>
+</body>
+</html>
