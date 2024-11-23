@@ -169,8 +169,8 @@ footer p {
 
 .logo a {
     text-decoration: none;
-    color: burlywood;
-    font-size: 1rem;
+    color: white;
+    font-size: 1.4rem;
 }
 
 .nav-items {
@@ -229,33 +229,52 @@ th {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Alinhamento à esquerda para label e input de data */
 .filter-left {
     display: flex;
-    align-items: center;
+    align-items: center;  /* Alinha os itens verticalmente ao centro */
+    gap: 10px;  /* Reduz o espaço entre os campos */
 }
 
-/* Estilo para o rótulo (label) */
 .filter-left label {
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    margin-right: 10px;
-    width: 28vh;
+    margin-right: 5px;  /* Espaço menor entre o label e o campo */
+    min-width: 60px;  /* Garante que os labels não sejam muito grandes */
 }
 
-/* Estilo para o campo de data */
-.filter-left input[type="date"] {
+.filter-left input[type="date"],
+.filter-left select {
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease;
+    min-width: 180px;  /* Largura mínima */
 }
 
-.filter-left input[type="date"]:focus {
+/* Efeito de foco para inputs e selects */
+.filter-left input[type="date"]:focus,
+.filter-left select:focus {
     border-color: #007bff;
+}
+
+/* Responsividade para telas pequenas (mas mantendo a linha única) */
+@media (max-width: 600px) {
+    .filter-left {
+        overflow-x: auto;  /* Permite rolagem horizontal se necessário */
+    }
+
+    .filter-left label {
+        margin-right: 5px;  /* Manter um pequeno espaçamento */
+        min-width: auto;  /* Remove o tamanho fixo do label */
+    }
+
+    .filter-left input[type="date"],
+    .filter-left select {
+        width: 150px;  /* Define largura para garantir que os campos caibam */
+    }
 }
 
 /* Alinhamento à direita para os botões */

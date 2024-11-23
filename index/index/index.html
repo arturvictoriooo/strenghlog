@@ -26,7 +26,7 @@
 
     <header>
         <div class="user-profile">
-            <img src="https://via.placeholder.com/150" alt="Ícone do Usuário" class="user-icon">
+            
             <div class="user-info">
                 <h2 id="user-name">Nome do Usuário</h2>
                 <a href="/index/perfil/perfil.html" class="profile-link">Informações adicionais do perfil</a>
@@ -70,17 +70,22 @@
 
                     <div class="form-group">
                         <label for="series">Séries:</label>
-                        <input type="number" id="series" name="series" min="1" required>
+                        <input type="number" id="series" name="series" min="1" placeholder="Quantidade de séries" required>
                     </div>
 
                     <div class="form-group">
                         <label for="repeticoes">Repetições:</label>
-                        <input type="number" id="repeticoes" name="repeticoes" min="1" required>
+                        <input type="number" id="repeticoes" name="repeticoes" min="1" placeholder="Quantidade de repetições" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="peso">Peso:</label>
+                        <input type="number" id="peso" name="peso" min="1" placeholder="Peso" required>
                     </div>
 
                     <div class="form-group">
                         <label for="tecnicaAvancada">Técnica Avançada:</label>
-                        <input type="text" id="tecnicaAvancada" name="tecnicaAvancada" placeholder="Descreva a técnica (se houver)">
+                        <input type="text" id="tecnicaAvancada" name="tecnicaAvancada" placeholder="Descreva a técnica avançada (se houver)">
                     </div>
 
                     <div class="form-group">
@@ -90,6 +95,8 @@
 
                     <button type="submit">Registrar Treino</button>
                 </form>
+
+                
                 <div id="mensagem" style="display: none;"></div>
             </section>
         </div>
@@ -100,8 +107,21 @@
 
                 <div class="filter-container">
                     <div class="filter-left">
-                        <label for="filterDate">Filtrar por data:</label>
+                        <label for="filterDate">Data:</label>
                         <input type="date" id="filterDate">
+
+                        <label for="filterMuscle">Músculo:</label>
+                        <select id="filterMuscle">
+                            <option value="">Selecione</option>
+                            <option value="Costas">Costas</option>
+                            <option value="Peito">Peito</option>
+                            <option value="Ombro">Ombro</option>
+                            <option value="Biceps">Bíceps</option>
+                            <option value="Triceps">Tríceps</option>
+                            <option value="Quadriceps">Quadríceps</option>
+                            <option value="Posterior">Posterior de Coxa</option>
+                            <option value="Panturrilha">Panturrilha</option>
+                        </select>
                     </div>
                     <div class="filter-right">
                         <button id="filterBtn">Filtrar</button>
@@ -109,22 +129,29 @@
                     </div>
                 </div>
 
-                <table id="treinosTable">
-                    <thead>
-                        <tr>
-                            <th>Semana</th>
-                            <th>Grupamento Muscular</th>
-                            <th>Exercício</th>
-                            <th>Séries</th>
-                            <th>Repetições</th>
-                            <th>Técnica Avançada</th>
-                            <th>Observações</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<table id="treinosTable">
+    <thead>
+        <tr>
+            <th id="semanaHeader">
+                Semana 
+                <i id="sortIcon" class="fas fa-sort"></i>  <!-- Ícone de ordenação -->
+            </th>
+            <th>Grupamento Muscular</th>
+            <th>Exercício</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Peso</th>
+            <th>Técnica Avançada</th>
+            <th>Observações</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Os dados serão inseridos aqui dinamicamente -->
+    </tbody>
+</table>
             </section>
         </div>
     </main>
