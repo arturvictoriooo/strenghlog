@@ -20,9 +20,3 @@ function openTab(evt, tabName) {
 // Exibe a primeira aba por padrão
 document.getElementById("registro").style.display = "block";
 document.querySelector(".tab-link").classList.add("active");
-
-
-
-
-// código de comunicação com o supabase
-
